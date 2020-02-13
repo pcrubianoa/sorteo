@@ -42,6 +42,7 @@
       <![endif]-->
     <script>
         var path_images = "<?= PATH_IMAGES ?>";
+        var sorteo_db = "<?= SORTEO_DB ?>";
     </script>
 </head>
 
