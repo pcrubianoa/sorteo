@@ -5,7 +5,8 @@ $vue = new Vue({
         imagenes: [],
         errors:[],
         identificacion:null,
-        path_images
+        path_images,
+        sorteo_db
     },
     methods:{
         consultar:function(e) {
@@ -24,7 +25,7 @@ $vue = new Vue({
     },
     mounted(){
         // Familias
-        axios.get("https://logis.com.co/app/api/web/sorteos.php?sorteo=dev", {
+        axios.get("https://logis.com.co/app/api/web/sorteos.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -40,7 +41,7 @@ $vue = new Vue({
         });
 
         // Imagenes
-        axios.get("https://logis.com.co/app/api/web/imagenes_patrocinadores.php?sorteo=dev", {
+        axios.get("https://logis.com.co/app/api/web/imagenes_patrocinadores.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',
