@@ -28,10 +28,9 @@ $vue = new Vue({
         axios.get("https://logis.com.co/app/api/web/sorteos.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
-                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             },
-            withCredentials: true,
+            withCredentials: false,
             credentials: 'same-origin',
         }).then(res => {
                 this.sorteos = res.data;
@@ -47,7 +46,7 @@ $vue = new Vue({
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             },
-            withCredentials: true,
+            withCredentials: false,
             credentials: 'same-origin',
         }).then(res => {
             this.imagenes = res.data;
