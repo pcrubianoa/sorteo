@@ -28,7 +28,7 @@ $vue = new Vue({
         axios.get("https://logis.com.co/app/api/web/sorteos.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
-                'Access-Control-Allow-Origin': 'https://tusorteo.co',
+                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             },
             withCredentials: false,
@@ -44,7 +44,7 @@ $vue = new Vue({
         axios.get("https://logis.com.co/app/api/web/imagenes_patrocinadores.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
-                'Access-Control-Allow-Origin': 'https://tusorteo.co',
+                'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             },
             withCredentials: false,
