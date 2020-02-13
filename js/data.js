@@ -13,7 +13,7 @@ $vue = new Vue({
     },
     mounted(){
         // Familias
-        axios.get("http://localhost/app/api/web/sorteos.php?empresa=dev", {
+        axios.get("https://logis.com.co/app/api/web/sorteos.php?empresa=dev", {
             mode: 'no-cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -29,7 +29,7 @@ $vue = new Vue({
         });
 
         // Imagenes
-        axios.get("http://localhost/app/api/web/imagenes_patrocinadores.php?empresa=dev", {
+        axios.get("https://logis.com.co/app/api/web/imagenes_patrocinadores.php?empresa=dev", {
             mode: 'no-cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',
