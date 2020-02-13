@@ -31,7 +31,7 @@ $vue = new Vue({
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             },
-            withCredentials: false,
+            withCredentials: true,
             credentials: 'same-origin',
         }).then(res => {
                 this.sorteos = res.data;
@@ -47,7 +47,7 @@ $vue = new Vue({
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
             },
-            withCredentials: false,
+            withCredentials: true,
             credentials: 'same-origin',
         }).then(res => {
             this.imagenes = res.data;
