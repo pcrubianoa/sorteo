@@ -1,4 +1,4 @@
-<?php require('config.php'); ?>
+<?php require('../../config.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,24 +19,24 @@
    <!-- CSS
          ================================================== -->
    <!-- Bootstrap -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="../../css/bootstrap.min.css">
 
    <!-- FontAwesome -->
-   <link rel="stylesheet" href="css/font-awesome.min.css">
+   <link rel="stylesheet" href="../../css/font-awesome.min.css">
    <!-- Animation -->
-   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="../../css/animate.css">
    <!-- magnific -->
-   <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="../../css/magnific-popup.css">
    <!-- carousel -->
-   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
    <!-- isotop -->
-   <link rel="stylesheet" href="css/isotop.css">
+   <link rel="stylesheet" href="../../css/isotop.css">
    <!-- ico fonts -->
-   <link rel="stylesheet" href="css/xsIcon.css">
+   <link rel="stylesheet" href="../../css/xsIcon.css">
    <!-- Template styles-->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="../../css/style.css">
    <!-- Responsive styles-->
-   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="stylesheet" href="../../css/responsive.css">
 
    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -82,7 +82,7 @@
 
       <!-- banner start-->
       <section class="hero-area hero-speakers">
-         <div class="banner-item overlay" style="background-image:url(images/cityu.jpg); background-position: left; background-position-x: 8%;">
+         <div class="banner-item overlay" style="background-image:url(../../images/cityu.jpg); background-position: left; background-position-x: 8%;">
             <div class="container">
                <div class="row">
                   <div class="col-lg-7">
@@ -192,7 +192,7 @@
       <div class="footer-area">
 
          <!-- ts-book-seat start-->
-         <section class="ts-book-seat" style="background-image: url(images/book_seat_img.jpg)">
+         <section class="ts-book-seat" style="background-image: url(../../images/book_seat_img.jpg)">
             <div class="container">
                <div class="row">
                   <div class="col-lg-8 mx-auto">
@@ -205,7 +205,7 @@
 
                </div><!-- row end-->
                <div class="ts-footer-newsletter">
-                  <div class="ts-newsletter" style="background-image: url(images/shap/subscribe_pattern.png)">
+                  <div class="ts-newsletter" style="background-image: url(../../images/shap/subscribe_pattern.png)">
                      <div class="row">
                         <div class="col-lg-6 mx-auto">
                            <div class="ts-newsletter-content">
@@ -288,28 +288,28 @@
       <!-- Javascript Files
             ================================================== -->
       <!-- initialize jQuery Library -->
-      <script src="js/jquery.js"></script>
+      <script src="../../js/jquery.js"></script>
 
-      <script src="js/popper.min.js"></script>
+      <script src="../../js/popper.min.js"></script>
       <!-- Bootstrap jQuery -->
-      <script src="js/bootstrap.min.js"></script>
+      <script src="../../js/bootstrap.min.js"></script>
       <!-- Counter -->
-      <script src="js/jquery.appear.min.js"></script>
+      <script src="../../js/jquery.appear.min.js"></script>
       <!-- Countdown -->
-      <script src="js/jquery.jCounter.js"></script>
+      <script src="../../js/jquery.jCounter.js"></script>
       <!-- magnific-popup -->
-      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="../../js/jquery.magnific-popup.min.js"></script>
       <!-- carousel -->
-      <script src="js/owl.carousel.min.js"></script>
+      <script src="../../js/owl.carousel.min.js"></script>
       <!-- Waypoints -->
-      <script src="js/wow.min.js"></script>
+      <script src="../../js/wow.min.js"></script>
 
       <!-- Momentjs -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/locale/es.js"></script>
 
       <!-- isotop -->
-      <script src="js/isotope.pkgd.min.js"></script>
+      <script src="../../js/isotope.pkgd.min.js"></script>
 
       <!-- Vuejs -->
       <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -318,10 +318,10 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
        
       <!-- Template custom -->
-      <script src="js/data.js"></script>
+      <script src="../../js/data.js"></script>
        
       <!-- Template custom -->
-      <script src="js/main.js"></script>
+      <script src="../../js/main.js"></script>
 
    </div>
    <!-- Body inner end -->

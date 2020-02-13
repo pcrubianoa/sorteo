@@ -1,3 +1,4 @@
+<?php require('config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
    <!-- Site Title -->
-   <title>Exhibit - Conference &amp; Event HTML Template</title>
+   <title>Tu Sorteo - Terminos y Condiciones</title>
 
    <!-- CSS
          ================================================== -->
@@ -39,18 +40,20 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-
+    <script>
+        var path_images = "<?= PATH_IMAGES ?>";
+    </script>
 </head>
 
 <body>
-   <div class="body-inner">
+   <div id="app" class="body-inner">
       <!-- Header start -->
       <header id="header" class="header header-transparent">
          <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                <!-- logo-->
                <a class="navbar-brand" href="#">
-						<img src="images/logos/logo.png" alt="">
+						<img src="images/logos/logo-alt.png" alt="">
 					</a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                   aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,13 +126,10 @@
          <!-- Subpage title start -->
          <div class="page-banner-title">
             <div class="text-center">
-               <h2>Error Page</h2>
+               <h2>Términos y Condiciones</h2>
                <ol class="breadcrumb">
                   <li>
-                     <a href="#">Exibit /</a>
-                  </li>
-                  <li>
-                     404
+                     <a href="#">Información importante para los usuarios</a>
                   </li>
                </ol>
             </div>
@@ -143,16 +143,11 @@
             <div class="row">
                <div class="col-lg-6 mx-auto">
                   <div class="error-page text-center">
-                     <div class="error-code">
-                        <h2><strong>404</strong></h2>
+                     <div class="error-body" v-for="sorteo in sorteos">
+                        {{ sorteo.condiciones }}
                      </div>
-                     <div class="error-message">
-                        <h3>Oops... Page Not Found!</h3>
-                     </div>
-                     <div class="error-body">
-                        Try using the button below to go to main page of the site <br>
-                        <a href="index.html" class="btn">Back to Home Page</a>
-                     </div>
+                      <br>
+                      <a href="index.html" class="btn">Volver al Sorteo</a>
                   </div>
                </div>
             </div><!-- Content row -->
@@ -272,8 +267,22 @@
       <script src="js/owl.carousel.min.js"></script>
       <!-- Waypoints -->
       <script src="js/wow.min.js"></script>
+
+      <!-- Momentjs -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.js"></script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/locale/es.js"></script>
       <!-- isotop -->
       <script src="js/isotope.pkgd.min.js"></script>
+
+      <!-- Vuejs -->
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+      <!-- Axios -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+      <!-- Template custom -->
+      <script src="js/data.js"></script>
 
       <!-- Template custom -->
       <script src="js/main.js"></script>
