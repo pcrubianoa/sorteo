@@ -54,7 +54,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                <!-- logo-->
                <a class="navbar-brand" href="index.html">
-                  <i class="las la-dice-d6" style="font-size: 32px;"></i> Tu Sorteo
+                   <img src="images/logos/logo.png" alt="" width="50%">
                </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                   aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
