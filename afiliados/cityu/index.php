@@ -94,7 +94,6 @@
                             <h1 class="banner-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">{{ sorteo.nombre }}</h1>
                             <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.descripcion }}</p>
                             <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.responsable }}</p>
-                            <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.condiciones }}</p>
                         </div>
 
                         <div class="banner-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
