@@ -24,7 +24,7 @@ $vue = new Vue({
     },
     mounted(){
         // Familias
-        axios.get("http://localhost/app/api/web/sorteos.php?sorteo=dev", {
+        axios.get("https://logis.com.co/app/api/web/sorteos.php?sorteo=dev", {
             mode: 'no-cors',
             headers: {
                 'Access-Control-Allow-Origin': '*',

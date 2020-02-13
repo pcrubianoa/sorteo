@@ -53,8 +53,8 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                <!-- logo-->
                <a class="navbar-brand" href="index.php">
-						<img src="../../images/logos/logo-alt.png" alt="">
-					</a>
+                    <img src="../../images/logos/logo-alt.png" alt="">
+                </a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                   aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -96,7 +96,7 @@
                         {{ sorteo.condiciones }}
                      </div>
                       <br>
-                      <a href="index.html" class="btn">Volver al Sorteo</a>
+                      <a href="index.php" class="btn">Volver al Sorteo</a>
                   </div>
                </div>
             </div><!-- Content row -->
