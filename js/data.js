@@ -4,17 +4,25 @@ $vue = new Vue({
         sorteos: [],
         imagenes: [],
         errors:[],
-        identificacion:null,
+        identificacion: null,
+        acumulados: [],
         path_images,
         sorteo_db
     },
     methods:{
-        consultar:function(e) {
-            if(this.name && this.age) return true;
-            this.errors = [];
-            if(!this.identificacion) this.errors.push("Name required.");
-            if(!this.age) this.errors.push("Age required.");
+        consultar: function(e) {
             e.preventDefault();
+            if(this.identificacion) this.errors = [];
+            this.errors = [];
+            if(this.identificacion == null) this.errors.push("Digita tu número de Identificación");
+
+            axios.post('http://localhost/app/api/web/consulta.php?sorteo=' + sorteo_db, {
+                identificacion: this.identificacion,
+            }).then(res => {
+                this.acumulados = res.data;
+            }).catch(error => {
+                console.log(error);
+            });
         }
     },
     filters: {
@@ -25,7 +33,7 @@ $vue = new Vue({
     },
     mounted(){
         // Familias
-        axios.get("https://logis.com.co/app/api/web/sorteos.php?sorteo=" + sorteo_db, {
+        axios.get("http://localhost/app/api/web/sorteos.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
@@ -40,7 +48,7 @@ $vue = new Vue({
         });
 
         // Imagenes
-        axios.get("https://logis.com.co/app/api/web/imagenes_patrocinadores.php?sorteo=" + sorteo_db, {
+        axios.get("http://localhost/app/api/web/imagenes_patrocinadores.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',

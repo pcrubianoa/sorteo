@@ -88,12 +88,13 @@
                <div class="row">
                   <div class="col-lg-7">
                      <div class="banner-content-wrap">
-                        
+                        <div v-if="sorteos && sorteos.length">
                         <div v-for="sorteo in sorteos">
                             <p class="banner-info wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.fecha_sorteo | formatDate }}</p>
                             <h1 class="banner-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">{{ sorteo.nombre }}</h1>
                             <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.descripcion }}</p>
                             <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.responsable }}</p>
+                        </div>
                         </div>
 
                         <div class="banner-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
@@ -108,10 +109,10 @@
                      <div class="hero-form-content">
                         <h2>Registrate Ahora</h2>
                         <p>
-                           Registrate y participa en el sorteo.
+                           Registrate, sube tu factura  y participa en el sorteo.
                         </p>
                         
-                        <form action="http://35.231.168.139/logis-images/" method="POST" class="hero-form" enctype="multipart/form-data">
+                        <form action="http://35.231.168.139/storage/" method="POST" class="hero-form" enctype="multipart/form-data">
                             <input class="form-control form-control-name" placeholder="Nombre" name="nombre" id="f-nombre" type="text" required="">
                             <input class="form-control form-control-name" placeholder="Apellido" name="apellido" id="f-nombre" type="text" required="">
                             <input class="form-control form-control-phone" placeholder="Identificación" name="identificacion" id="f-identificacion" type="number">
@@ -138,25 +139,27 @@
                <div class="row">
                    <div class="col-lg-8 mx-auto">
                        <h2 class="section-title text-center">
-                           <span>¿Cuantos facturas llevas acumuladas?</span>
+                           <span>¿Cuantas facturas llevas acumuladas?</span>
                            Consulta tu valor acumulado
                        </h2>
                    </div><!-- col end-->
                </div>
                <div class="row">
-                   <div class="col-lg-8 mx-auto">
-                       <form id="contact-form" class="contact-form" action="http://localhost/app/api/web/consulta.php?empresa=dev" @submit="consultar" method="POST">
+                   <div class="col-lg-6 mx-auto">
+                       <form id="contact-form" class="contact-form" method="POST">
                            <div class="error-container"></div>
                            <div class="row">
                                <div class="col-md-12">
                                    <div class="form-group">
-                                       <input class="form-control form-control-name" placeholder="Número de Identificación" name="identificacion" id="f-name"
-                                              type="text" required>
+                                       <input class="form-control form-control-name" placeholder="Número de Identificación" v-model="identificacion" name="identificacion" id="f-name" type="text" required>
                                    </div>
+                                   <p v-if="errors.length">
+                                        <h4 v-for="error in errors">{{ error }}</h4>
+                                   </p>
                                </div>
                            </div>
                            <div class="text-center"><br>
-                               <button class="btn" type="submit">Consultar</button>
+                               <button class="btn" v-on:click="consultar">Consultar</button>
                            </div>
                        </form><!-- Contact form end -->
                    </div>
@@ -166,6 +169,26 @@
                <img class="shap1" src="images/shap/home_schedule_memphis2.png" alt="">
            </div>
        </section>
+       
+       <section class="ts-pricing gradient" style="background-image: url(images/pricing/pricing_img.jpg)">
+           <div class="container">
+               <h2 v-show="acumulados.length" class="section-title white">Estas son todas tus facturas:</h2>
+               <div class="row">
+                   <div v-for="acumulado in acumulados" class="col-lg-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1.5s; animation-delay: 400ms; animation-name: fadeInUp;">
+                       <div class="single-intro-text mb-30">
+                           <small>{{ acumulado.fecha_registro | formatDate }}</small>
+                           <p><strong>Nombre:</strong> {{ acumulado.nombre + ' ' + acumulado.apellido}}</p>
+                           <p><strong>Identificación:</strong> {{ acumulado.identificacion }}</p>
+                           <p><strong>Almacén:</strong> {{ acumulado.almacen }}</p>
+                           <p><strong>Valor Factura:</strong> ${{ acumulado.valor_factura }}</p>
+                       </div><!-- single intro text end-->
+                   </div>
+               </div>
+           </div><!-- container end-->
+       </section>
+       
+       
+       
 
        <section class="ts-intro-sponsors">
            <div class="container">
@@ -177,7 +200,7 @@
                        </h2><!-- section title end-->
                    </div><!-- col end-->
                </div><!-- row end-->
-               <div class="row sponsor-padding text-center">
+               <div class="row sponsor-padding text-center" v-if="imagenes & imagenes.lenght">
                    
                    <div class="col-lg-2 d-flex align-items-center" v-for="imagen in imagenes">
                        <a href="#" class="sponsors-logo">
@@ -305,17 +328,17 @@
       <script src="../../js/wow.min.js"></script>
 
       <!-- Momentjs -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/locale/es.js"></script>
+      <script src="../../js/moment.js"></script>
+      <script src="../../js/es.js"></script>
 
       <!-- isotop -->
       <script src="../../js/isotope.pkgd.min.js"></script>
 
       <!-- Vuejs -->
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="../../js/vue.js"></script>
 
       <!-- Axios -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+      <script src="../../js/axios.min.js"></script>
        
       <!-- Template custom -->
       <script src="../../js/data.js"></script>

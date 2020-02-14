@@ -217,17 +217,17 @@
       <script src="../../js/wow.min.js"></script>
 
       <!-- Momentjs -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.js"></script>
+      <script src="../../js/moment.js"></script>
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/locale/es.js"></script>
+      <script src="../../js/es.js"></script>
       <!-- isotop -->
       <script src="../../js/isotope.pkgd.min.js"></script>
 
       <!-- Vuejs -->
-      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="../../js/vue.js"></script>
 
       <!-- Axios -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+      <script src="../../js/axios.min.js"></script>
 
       <!-- Template custom -->
       <script src="../../js/data.js"></script>
