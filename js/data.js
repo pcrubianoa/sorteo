@@ -20,7 +20,7 @@ $vue = new Vue({
             } else {
                 axios.post('https://logis.com.co/app/api/web/consulta.php?sorteo=' + sorteo_db, {
                     identificacion: this.identificacion,
-                }).then(res => {
+                },{headers: {'Accept': 'application/json'}}).then(res => {
                     this.acumulados = res.data;
                 }).catch(error => {
                     console.log(error);

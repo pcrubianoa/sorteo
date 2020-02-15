@@ -151,7 +151,7 @@
                            <div class="row">
                                <div class="col-md-12">
                                    <div class="form-group">
-                                       <input class="form-control form-control-name" placeholder="Número de Identificación" v-model="identificacion" name="identificacion" id="f-name" type="number" required>
+                                       <input class="form-control form-control-name" placeholder="Número de Identificación" v-model="identificacion" name="identificacion" id="f-name" type="text" required>
                                    </div>
                                    <p v-if="errors.length">
                                         <h4 v-for="error in errors">{{ error }}</h4>
