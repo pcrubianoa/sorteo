@@ -7,6 +7,7 @@ $vue = new Vue({
         identificacion: null,
         acumulados: [],
         path_images,
+        path_images_sponsors,
         sorteo_db
     },
     methods:{
