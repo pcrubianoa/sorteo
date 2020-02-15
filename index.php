@@ -82,7 +82,7 @@
                   <div class="col-lg-8 mx-auto">
                      <div class="banner-content-wrap text-center">
 
-                        <p class="banner-info">Haz sorteos rápidamente!</p>
+                        <p class="banner-info">¡Crea y gestiona tus concursos y sorteos fácilmente!</p>
                         <h1 class="banner-title">Tu Sorteo</h1>
 
                         <div class="countdown">

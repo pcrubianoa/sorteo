@@ -12,17 +12,19 @@ $vue = new Vue({
     methods:{
         consultar: function(e) {
             e.preventDefault();
-            if(this.identificacion) this.errors = [];
+            if (this.identificacion) this.errors = [];
             this.errors = [];
-            if(this.identificacion == null) this.errors.push("Digita tu número de Identificación");
-
-            axios.post('https://logis.com.co/app/api/web/consulta.php?sorteo=' + sorteo_db, {
-                identificacion: this.identificacion,
-            }).then(res => {
-                this.acumulados = res.data;
-            }).catch(error => {
-                console.log(error);
-            });
+            if (this.identificacion == null) {
+                this.errors.push("Digita tu número de Identificación");
+            } else {
+                axios.post('https://logis.com.co/app/api/web/consulta.php?sorteo=' + sorteo_db, {
+                    identificacion: this.identificacion,
+                }).then(res => {
+                    this.acumulados = res.data;
+                }).catch(error => {
+                    console.log(error);
+                });
+            }
         },
     },
     filters: {
