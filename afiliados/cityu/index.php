@@ -200,7 +200,7 @@
                    
                    <div class="col-lg-2 d-flex align-items-center" v-for="imagen in imagenes">
                        <a href="#" class="sponsors-logo">
-                           <img class="img-fluid" :src="path_images + imagen.imagen" alt="" width="60%">
+                           <img class="img-fluid" :src="PATH_IMAGES_SPONSORS + imagen.imagen" alt="" width="60%">
                        </a>
                    </div>
                    

@@ -50,7 +50,7 @@ $vue = new Vue({
         });
 
         // Imagenes
-        axios.get("https://logis.com.co/app/api/web/imagenes_patrocinadores.php?sorteo=" + sorteo_db, {
+        axios.get("http://localhost/app/api/web/imagenes_patrocinadores.php?sorteo=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
