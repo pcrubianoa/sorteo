@@ -197,7 +197,7 @@
                        </h2><!-- section title end-->
                    </div><!-- col end-->
                </div><!-- row end-->
-               <div class="row sponsor-padding text-center" v-if="imagenes & imagenes.lenght">
+               <div class="row sponsor-padding text-center">
                    
                    <div class="col-lg-2 d-flex align-items-center" v-for="imagen in imagenes">
                        <a href="#" class="sponsors-logo">
