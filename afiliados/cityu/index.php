@@ -1,4 +1,5 @@
 <?php require('../../config.php'); ?>
+<?php require('../../partials/calendar.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +14,6 @@
 
    <!-- Site Title -->
    <title>Tu Sorteo</title>
-
-
 
    <!-- CSS
          ================================================== -->
@@ -66,7 +65,7 @@
                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ml-auto">
                      <li class="dropdown nav-item active">
-                        <a href="#" class="">Inicio</a>
+                        <a href="index.php" class="">Inicio</a>
                      </li>
                      <li class="dropdown nav-item">
                         <a href="terminos.php" class="">Terminos y Condiciones</a>
@@ -99,7 +98,7 @@
 
                         <div class="banner-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
                            <a href="#" class="btn">Registrate</a>
-                           <a href="#" class="btn fill">Agregar al Calendario</a>
+                           <a href="<?php echo getGCalendarUrl($evento); ?>" class="btn fill">Agregar al Calendario</a>
                         </div>
 
                      </div>
@@ -187,9 +186,6 @@
            </div><!-- container end-->
        </section>
        
-       
-       
-
        <section class="ts-intro-sponsors">
            <div class="container">
                <div class="row">
