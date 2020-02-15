@@ -170,7 +170,7 @@
            </div>
        </section>
        
-       <section class="ts-pricing gradient" style="background-image: url(images/pricing/pricing_img.jpg)">
+       <section class="ts-pricing gradient" style="background-image: url(../../images/pricing/pricing_img.jpg)">
            <div class="container">
                <h2 v-show="acumulados.length" class="section-title white">Estas son todas tus facturas:</h2>
                <div class="row">
