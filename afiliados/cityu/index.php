@@ -112,7 +112,7 @@
                            Registrate, sube tu factura  y participa en el sorteo.
                         </p>
                         
-                        <form action="http://35.231.168.139/storage/" method="POST" class="hero-form" enctype="multipart/form-data">
+                        <form action="http://35.231.168.139/storage/cityu" method="POST" class="hero-form" enctype="multipart/form-data">
                             <input class="form-control form-control-name" placeholder="Nombre" name="nombre" id="f-nombre" type="text" required="">
                             <input class="form-control form-control-name" placeholder="Apellido" name="apellido" id="f-nombre" type="text" required="">
                             <input class="form-control form-control-phone" placeholder="Identificación" name="identificacion" id="f-identificacion" type="number">
