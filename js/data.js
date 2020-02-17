@@ -20,7 +20,7 @@ $vue = new Vue({
             } else {
                 axios.post('https://logis.com.co/app/api/web/consulta.php?sorteo=' + sorteo_db, {
                     identificacion: this.identificacion,
-                },{headers: {'Accept': 'application/json'}}).then(res => {
+                }).then(res => {
                     this.acumulados = res.data;
                 }).catch(error => {
                     console.log(error);
@@ -44,10 +44,9 @@ $vue = new Vue({
             withCredentials: false,
             credentials: 'same-origin',
         }).then(res => {
-                this.sorteos = res.data;
-            })
-            .catch(function (error) {
-                console.log(error);
+            this.sorteos = res.data;
+        }).catch(function (error) {
+            console.log(error);
         });
 
         // Imagenes
@@ -60,10 +59,9 @@ $vue = new Vue({
             credentials: 'same-origin',
         }).then(res => {
             this.imagenes = res.data;
-        })
-            .catch(function (error) {
-                console.log(error);
-            });
+        }).catch(function (error) {
+            console.log(error);
+        });
     }
 });
 
