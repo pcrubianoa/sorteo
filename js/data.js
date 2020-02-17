@@ -19,7 +19,7 @@ $vue = new Vue({
                 this.errors.push("Digita tu número de Identificación");
             } else {
 
-                axios.get("https://logis.com.co/app/api/web/consulta.php?identificacion=" + this.identificacion + "&sorteo=" + 'sorteo', {
+                axios.get("https://logis.com.co/app/api/web/consulta.php?identificacion=" + this.identificacion + "&sorteo=" + 'cityu', {
                     mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json',
