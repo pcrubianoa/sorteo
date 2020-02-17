@@ -18,9 +18,8 @@ $vue = new Vue({
             if (this.identificacion == null) {
                 this.errors.push("Digita tu número de Identificación");
             } else {
-                axios.post('https://logis.com.co/app/api/web/consulta.php?sorteo=' + sorteo_db, {
-                    identificacion: this.identificacion,
-                },{
+
+                axios.get("https://logis.com.co/app/api/web/consulta.php?identificacion=" + this.identificacion + "&sorteo=" + 'sorteo', {
                     mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json',
@@ -29,9 +28,10 @@ $vue = new Vue({
                     credentials: 'same-origin',
                 }).then(res => {
                     this.acumulados = res.data;
-                }).catch(error => {
+                }).catch(function (error) {
                     console.log(error);
                 });
+
             }
         },
     },
