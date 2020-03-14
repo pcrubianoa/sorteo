@@ -44,6 +44,7 @@
         var path_images = "<?= PATH_IMAGES ?>";
         var path_images_sponsors = "<?= PATH_IMAGES_SPONSORS ?>";
         var sorteo_db = "<?= SORTEO_DB ?>";
+        var api_url = "<?= API_URL ?>";
     </script>
 </head>
 
@@ -94,11 +95,16 @@
             <div class="row">
                <div class="col-lg-12 mx-auto">
                   <div class="error-page text-justify" v-if="sorteos && sorteos.length">
-                     <div class="error-body" v-for="sorteo in sorteos">
-                        {{ sorteo.condiciones }}
-                     </div>
-                      <br>
-                      <a href="index.php" class="btn pull-right">Volver al Sorteo</a>
+                     <template v-if="sorteos && sorteos.length">
+                        <div class="error-body wow fadeInUp" v-for="sorteo in sorteos">
+                            {{ sorteo.condiciones }}
+                        </div>
+                     </template>
+                     <template v-else>
+                        No hay terminos y condiciones.
+                     </template>
+                     <br>
+                     <a href="index.php" class="btn pull-right">Volver al Sorteo</a>
                   </div>
                </div>
             </div><!-- Content row -->

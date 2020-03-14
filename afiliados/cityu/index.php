@@ -47,6 +47,7 @@
         var path_images = "<?= PATH_IMAGES ?>";
         var path_images_sponsors = "<?= PATH_IMAGES_SPONSORS ?>";
         var sorteo_db = "<?= SORTEO_DB ?>";
+        var api_url = "<?= API_URL ?>";
     </script>
 </head>
 
@@ -88,14 +89,14 @@
                <div class="row">
                   <div class="col-lg-7">
                      <div class="banner-content-wrap">
-                        <div v-if="sorteos && sorteos.length">
-                        <div v-for="sorteo in sorteos">
-                            <p class="banner-info wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.fecha_sorteo | formatDate }}</p>
-                            <h1 class="banner-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">{{ sorteo.nombre }}</h1>
-                            <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.descripcion }}</p>
-                            <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.responsable }}</p>
-                        </div>
-                        </div>
+                        <template v-if="sorteos && sorteos.length">
+                            <div v-for="sorteo in sorteos">
+                                <p class="banner-info wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.fecha_sorteo | formatDate }}</p>
+                                <h1 class="banner-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="700ms">{{ sorteo.nombre }}</h1>
+                                <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.descripcion }}</p>
+                                <p class="banner-info wow fadeInUp mt-0" data-wow-duration="1.5s" data-wow-delay="500ms">{{ sorteo.responsable }}</p>
+                            </div>
+                        </template>
 
                         <div class="banner-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="800ms">
                            <a href="#" class="btn">Registrate</a>
@@ -172,15 +173,15 @@
        
        <section class="ts-pricing gradient" style="background-image: url(../../images/pricing/pricing_img.jpg)">
            <div class="container">
-               <h2 v-show="acumulados.length" class="section-title white">Estas son todas tus facturas:</h2>
+               <h2 v-show="acumulados.length" class="section-title white">Estas son todas tus facturas</h2>
                <div class="row">
                    <div v-for="acumulado in acumulados" class="col-lg-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms" style="visibility: visible; animation-duration: 1.5s; animation-delay: 400ms; animation-name: fadeInUp;">
-                       <div class="single-intro-text mb-30">
+                       <div class="single-intro-text mb-30 text-center">
                            <small>{{ acumulado.fecha_registro | formatDate }}</small>
-                           <p><strong>Nombre:</strong> {{ acumulado.nombre + ' ' + acumulado.apellido}}</p>
-                           <p><strong>Identificación:</strong> {{ acumulado.identificacion }}</p>
+                           <p><strong></strong> {{ acumulado.nombre + ' ' + acumulado.apellido}}</p>
+                           <p><strong></strong> {{ acumulado.identificacion }}</p>
                            <p><strong>Almacén:</strong> {{ acumulado.almacen }}</p>
-                           <p><strong>Valor Factura:</strong> ${{ acumulado.valor_factura }}</p>
+                           <h4>${{ acumulado.valor_factura }}</h4>
                        </div><!-- single intro text end-->
                    </div>
                </div>

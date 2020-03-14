@@ -19,7 +19,7 @@ $vue = new Vue({
                 this.errors.push("Digita tu número de Identificación");
             } else {
 
-                axios.get("https://logis.com.co/app/api/web/consulta.php?identificacion=" + this.identificacion + "&sorteo=" + 'cityu', {
+                axios.get(api_url + "app/api/web/consulta.php?identificacion=" + this.identificacion + "&empresa=" + 'cityu', {
                     mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ $vue = new Vue({
     },
     mounted(){
         // Familias
-        axios.get("https://logis.com.co/app/api/web/sorteos.php?sorteo=" + sorteo_db, {
+        axios.get(api_url + "app/api/web/sorteos.php?empresa=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ $vue = new Vue({
         });
 
         // Imagenes
-        axios.get("https://logis.com.co/app/api/web/imagenes_patrocinadores.php?sorteo=" + sorteo_db, {
+        axios.get(api_url + "app/api/web/imagenes_patrocinadores.php?empresa=" + sorteo_db, {
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',

@@ -12,7 +12,8 @@
 		$gCalUrl = "http://www.google.com/calendar/event?action=TEMPLATE&amp;text=$titulo&amp;dates=$dates&amp;details=$descripcion&amp;location=$localizacion&amp;trp=false&amp;sprop=$url&amp;sprop=name:$name";
 		return ($gCalUrl);
 	}
-	// array asociativo con los parametros mecesarios.
+	
+	// array asociativo con los parametros necesarios.
 	$evento = array(
 		'titulo' => 'Mi evento de prueba',
 		'descripcion' => 'Descripcion del evento de prueba',
